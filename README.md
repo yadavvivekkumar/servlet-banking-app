@@ -3,6 +3,7 @@ This Banking Management System is a full-stack Java web application built using 
 
 Designed using Object-Oriented Programming (OOP) principles, it follows a clean layered structure that separates the data, business logic, and presentation layers for scalability and maintainability.
 
+
 Key Features
 ✅ Create, view, and update accounts
 
@@ -20,6 +21,7 @@ Key Features
 
 🎨 Modern JSP-based UI
 
+
 🛠 Tech Stack
 Layer	Technology
 Frontend	HTML5, CSS3, JSP
@@ -32,6 +34,7 @@ TECHNOLOGIES USED 📌
 Front End 📫
 HTML5 CSS3 JavaScript
 
+
 Server Side ⚡
 Java Servlets Jsp JDBC
 
@@ -41,8 +44,10 @@ Eclipse
 Database 📦
 Mysql
 
+
 Installation and setup guide
 Follow these steps to set up and run the Bank Management System project on your local machine 🏦
+
 
 🔧 What You’ll Need First
 Ensure these tools are installed before diving in:
@@ -52,6 +57,7 @@ Ensure these tools are installed before diving in:
 🐱‍🏍 Apache Tomcat version 9+
 🗄 MySQL Server and MySQL Workbench
 ⚙ Maven (only if your project uses it)
+
 📥 Step 1: Grab the Project Code
 Clone the repository from GitHub and open it in your preferred IDE:
 
@@ -66,7 +72,9 @@ CREATE DATABASE bank_app;
 USE bank_app;
 Now either import the SQL file (database/bank_app.sql) or manually execute the schema below.
 
+
 🧬 Step 3: Create Tables
+
 Bank Accounts Table
 CREATE TABLE bank_accounts (
     accountNumber BIGINT PRIMARY KEY,
@@ -96,6 +104,7 @@ CREATE TABLE transactions (
 
 ✅ Your database is now structured and ready to go!
 
+
 🔐 Step 4: Link Your App to the Database
 Navigate to:
 
@@ -107,6 +116,7 @@ private static final String USER = "root";
 private static final String PASSWORD = "your_mysql_password";
 💡 Ensure MySQL Server is running before launching the app.
 
+
 🧭 Step 5: Configure Tomcat Server
 In Eclipse:
 
@@ -114,11 +124,14 @@ Go to Run → Run as server
 select a Tomcat Server → Local
 Set the Application context to /Bank_Project
 Use Port 8080
+
+
 ▶ Step 6: Launch the Application
 Hit the green ▶ Run button in eclipse. Then open your browser and visit:
 
-http://localhost:8080/BankApp/
+http://localhost:8080/BankProject/
 You should now see the homepage of your banking application
+
 
 🧑‍💼 Step 7: Create & Access Accounts
 Use the “Create Account” form to register a new user. Once registered, you can log in, check balances, and perform transactions.
@@ -153,6 +166,7 @@ src
         └── withdraw.jsp
 
 pom.xml
+
 🤝 Contribution of the Project
 🍴 Step 1: Fork the Repository
 Head to the GitHub page of the project and click Fork to create your own copy.
