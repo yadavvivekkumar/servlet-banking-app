@@ -1,10 +1,11 @@
-🏦 Banking Application
-This Banking Management System is a full-stack Java web application built using JSP, Servlets, JDBC, and MySQL. It simulates real-world banking operations — allowing users to create accounts, perform transactions (deposit, withdraw, transfer), and manage account details securely.
+🏦 Banking Management System
 
-Designed using Object-Oriented Programming (OOP) principles, it follows a clean layered structure that separates the data, business logic, and presentation layers for scalability and maintainability.
+A full-stack Java web application built using JSP, Servlets, JDBC, and MySQL, designed to simulate real-world banking operations including account management, secure authentication, deposits, withdrawals, fund transfers, and transaction tracking.
 
+This project follows Object-Oriented Programming (OOP) principles and a layered MVC architecture, ensuring maintainability, scalability, and clean separation of concerns.
 
-Key Features
+✅ Key Features
+
 ✅ Create, view, and update accounts
 
 💰 Deposit / Withdraw / Transfer money
@@ -15,66 +16,84 @@ Key Features
 
 🧾 Real-time balance updates
 
-🧱 Modular design using OOP & MVC
+🧱 Modular MVC architecture
 
-🗄 JDBC-based database connectivity
+🗄 JDBC-based MySQL database connectivity
 
 🎨 Modern JSP-based UI
 
-
 🛠 Tech Stack
-Layer	Technology
+Layer	Technologies
 Frontend	HTML5, CSS3, JSP
 Backend	Java Servlets (MVC)
 Database	MySQL (via JDBC)
 Server	Apache Tomcat 9.0
 Build Tool	Maven
-IDE	Eclipse IDEA
-TECHNOLOGIES USED 📌
+IDE	Eclipse / IntelliJ IDEA
+📌 Technologies Used
 Front End 📫
-HTML5 CSS3 JavaScript
 
+HTML5
+
+CSS3
+
+JavaScript
 
 Server Side ⚡
-Java Servlets Jsp JDBC
+
+Java Servlets
+
+JSP
+
+JDBC
 
 Development Tools 📺
-Eclipse
+
+Eclipse IDE
 
 Database 📦
-Mysql
 
+MySQL
 
-Installation and setup guide
-Follow these steps to set up and run the Bank Management System project on your local machine 🏦
+🏗 Installation & Setup Guide
 
+Follow these steps to set up and run the Banking Management System locally.
 
-🔧 What You’ll Need First
-Ensure these tools are installed before diving in:
+🔧 Prerequisites
 
-☕ Java Development Kit (JDK) version 11 or higher
+Ensure the following tools are installed:
+
+☕ JDK 11 or higher
+
 🖥 IntelliJ IDEA or Eclipse IDE
-🐱‍🏍 Apache Tomcat version 9+
-🗄 MySQL Server and MySQL Workbench
-⚙ Maven (only if your project uses it)
 
-📥 Step 1: Grab the Project Code
-Clone the repository from GitHub and open it in your preferred IDE:
+🐱‍🏍 Apache Tomcat 9+
 
-git clone https://github.com/Andra-Indu/Bank_Project
-cd Bank_project
-Launch IntelliJ or Eclipse and import the project.
+🗄 MySQL Server + MySQL Workbench
 
-🗃 Step 2: Initialize the Database
-Fire up MySQL Workbench (or any SQL client you prefer). Create and select the database:
+⚙ Maven (if required)
+
+📥 Step 1: Download the Project
+
+Clone the repository:
+
+git clone https://github.com/yadavvivekkumar/servlet-banking-app
+cd Bankproject
+
+
+Open the project in Eclipse or IntelliJ IDEA.
+
+🗃 Step 2: Setup the Database
+
+Launch MySQL Workbench and execute:
 
 CREATE DATABASE bank_app;
 USE bank_app;
-Now either import the SQL file (database/bank_app.sql) or manually execute the schema below.
 
+
+Either import the SQL file or run the schema manually.
 
 🧬 Step 3: Create Tables
-
 Bank Accounts Table
 CREATE TABLE bank_accounts (
     accountNumber BIGINT PRIMARY KEY,
@@ -102,43 +121,59 @@ CREATE TABLE transactions (
     FOREIGN KEY (transactionTo) REFERENCES bank_accounts(accountNumber)
 );
 
-✅ Your database is now structured and ready to go!
 
+✅ Your database setup is complete.
 
-🔐 Step 4: Link Your App to the Database
-Navigate to:
+🔐 Step 4: Configure Database Connection
+
+Open the file:
 
 src/main/java/util/DBConnection.java
-Update the credentials to match your MySQL setup:
+
+
+Update credentials:
 
 private static final String URL = "jdbc:mysql://localhost:3306/bank_app";
 private static final String USER = "root";
 private static final String PASSWORD = "your_mysql_password";
-💡 Ensure MySQL Server is running before launching the app.
 
 
-🧭 Step 5: Configure Tomcat Server
+Ensure MySQL is running.
+
+🧭 Step 5: Configure Apache Tomcat
+
 In Eclipse:
 
-Go to Run → Run as server
-select a Tomcat Server → Local
-Set the Application context to /Bank_Project
-Use Port 8080
+Go to Run → Run on Server
 
+Select Apache Tomcat (Local)
+
+Set context path: /Bank_Project
+
+Port: 8080
 
 ▶ Step 6: Launch the Application
-Hit the green ▶ Run button in eclipse. Then open your browser and visit:
+
+Click the Run button and open:
 
 http://localhost:8080/BankProject/
-You should now see the homepage of your banking application
 
 
-🧑‍💼 Step 7: Create & Access Accounts
-Use the “Create Account” form to register a new user. Once registered, you can log in, check balances, and perform transactions.
+Your banking system should now load successfully.
 
-✅ All Set! Your Bank Management System is now live on your local machine. Time to explore and test it out 🚀
+👤 Step 7: Create & Manage Accounts
 
-Project Structure
+Use “Create Account” to register
+
+Log in with account number + PIN
+
+Check balance, deposit, withdraw, transfer
+
+View full transaction history
+
+✅ Your banking system is now fully operational!
+
+📂 Project Structure
 src
 └── main
     ├── java
@@ -151,7 +186,7 @@ src
     └── webapp
         ├── account.jsp
         ├── bankTransfer.jsp
-        ├── checkBalannce.jsp   (Typo: should be checkBalance.jsp)
+        ├── checkBalannce.jsp   (typo: should be checkBalance.jsp)
         ├── dashboard.jsp
         ├── deposit.jsp
         ├── error500.jsp
@@ -167,21 +202,20 @@ src
 
 pom.xml
 
-🤝 Contribution of the Project
+🤝 Contribution Guide
 🍴 Step 1: Fork the Repository
-Head to the GitHub page of the project and click Fork to create your own copy.
 
-🌿 Step 2: Create a Feature Branch
-In your local repo, create a new branch for your changes:
+Click Fork in GitHub.
 
+🌿 Step 2: Create a New Branch
 git checkout -b your-feature-name
+
 💾 Step 3: Commit Your Changes
-Once you've made your edits, commit them with a clear message:
+git commit -m "Description of changes"
 
-git commit -m ""
 🚀 Step 4: Push to GitHub
-Send your branch to your GitHub fork:
-
 git push origin your-feature-name
-📬 Step 5: Open a Pull Request
-Go to the original repository and click Compare & Pull Request. Add a description, review your changes, and submit the PR.
+
+📬 Step 5: Submit a Pull Request
+
+Open a PR using Compare & Pull Request.
